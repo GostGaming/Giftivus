@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Giftivus/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.34375" />
+        <entry key="..\:/Giftivus/app/src/main/res/drawable/ic_launcher_background.xml" value="0.34375" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.2105087014725569" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.245703125" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/activity_gift_list.xml" value="0.5494791666666666" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/activity_main.xml" value="0.32760416666666664" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/activity_scrolling.xml" value="0.49728260869565216" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/content_scrolling.xml" value="0.2672239108409321" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/gift_bar.xml" value="0.5494791666666666" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/gift_list.xml" value="0.49094202898550726" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/single_giftee.xml" value="0.32760416666666664" />
+        <entry key="..\:/Giftivus/app/src/main/res/menu/menu_scrolling.xml" value="0.32760416666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
