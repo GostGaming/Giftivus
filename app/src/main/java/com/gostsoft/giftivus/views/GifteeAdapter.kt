@@ -1,4 +1,4 @@
-package com.gostsoft.giftivus
+package com.gostsoft.giftivus.views
 
 import android.content.Context
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.gostsoft.giftivus.models.Giftee
 
 import com.gostsoft.giftivus.databinding.SingleGifteeBinding
 
@@ -28,7 +29,7 @@ class GifteeAdapter (val giftees: List<Giftee>, val context: Context): RecyclerV
     }
 
     private fun openGiftList(index: Int) {
-        val intent = Intent(context, UserGiftList::class.java).putExtra(EXTRA_ID, index)
+        val intent = Intent(context, GiftListView::class.java).putExtra(EXTRA_ID, index)
         context.startActivity(intent)
     }
 

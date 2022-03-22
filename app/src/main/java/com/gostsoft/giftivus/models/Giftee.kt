@@ -1,9 +1,9 @@
-package com.gostsoft.giftivus
+package com.gostsoft.giftivus.models
 
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.util.Log
+import com.gostsoft.giftivus.R
 
 data class Giftee (val id: Int, val firstName: String, val lastName: String = "", val image: Bitmap = defaultBitmap()) {
     override fun toString(): String {

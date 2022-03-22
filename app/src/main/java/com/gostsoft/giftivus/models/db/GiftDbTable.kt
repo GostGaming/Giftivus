@@ -1,10 +1,10 @@
-package com.gostsoft.giftivus.db
+package com.gostsoft.giftivus.models.db
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.util.Log
-import com.gostsoft.giftivus.Gift
+import com.gostsoft.giftivus.models.Gift
 
 class GiftDbTable (context: Context) {
     private val dbHelper = GiftivusDb(context)

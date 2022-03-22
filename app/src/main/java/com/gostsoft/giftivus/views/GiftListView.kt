@@ -1,4 +1,4 @@
-package com.gostsoft.giftivus
+package com.gostsoft.giftivus.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,17 +6,16 @@ import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.gostsoft.giftivus.models.Gift
+import com.gostsoft.giftivus.R
 import com.gostsoft.giftivus.databinding.ActivityGiftListBinding
 
 const val EXTRA_ID = "com.gostsoft.giftivus.USERID"
 
-class UserGiftList : AppCompatActivity()  {
+class GiftListView : AppCompatActivity()  {
 
     private lateinit var binding: ActivityGiftListBinding
-    private val TAG = UserGiftList::class.simpleName
-
-    private val giftFileName = "gifts.txt"
-    private var filePath: String = ""
+    private val TAG = GiftListView::class.simpleName
 
     val giftList = mutableListOf<Gift>()
 
@@ -34,9 +33,6 @@ class UserGiftList : AppCompatActivity()  {
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
 
         return when (item.itemId) {
             R.id.action_settings -> true
@@ -47,7 +43,7 @@ class UserGiftList : AppCompatActivity()  {
     fun updateGifts () {
 
         for (gift in giftList) {
-            val giftLayout:ConstraintLayout = layoutInflater.inflate(R.layout.single_gift,null) as ConstraintLayout
+            val giftLayout: ConstraintLayout = layoutInflater.inflate(R.layout.single_gift,null) as ConstraintLayout
             val giftBar = giftLayout.findViewById<LinearLayout>(R.id.gift_bar)
             val qty = giftBar.findViewById<TextView>(R.id.gift_qty)
             val name = giftBar.findViewById<TextView>(R.id.gift_name)

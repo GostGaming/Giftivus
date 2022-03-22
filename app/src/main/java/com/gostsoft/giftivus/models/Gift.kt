@@ -1,4 +1,4 @@
-package com.gostsoft.giftivus
+package com.gostsoft.giftivus.models
 
 import android.graphics.Bitmap
 

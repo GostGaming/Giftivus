@@ -1,10 +1,10 @@
-package com.gostsoft.giftivus.db
+package com.gostsoft.giftivus.models.db
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.util.Log
-import com.gostsoft.giftivus.Giftee
+import com.gostsoft.giftivus.models.Giftee
 
 class GifteeDbTable(context: Context) {
 

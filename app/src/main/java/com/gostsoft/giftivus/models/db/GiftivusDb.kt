@@ -1,4 +1,4 @@
-package com.gostsoft.giftivus.db
+package com.gostsoft.giftivus.models.db
 
 import android.content.Context
 import android.database.Cursor
@@ -22,7 +22,7 @@ class GiftivusDb (context: Context): SQLiteOpenHelper (context, DATABASE_NAME, n
             "${GiftEntry.NAME_COL} TEXT," +
             "${GiftEntry.GIFTEE_COL} INTEGER," +
             "${GiftEntry.LINK_COL} TEXT," +
-            "${GiftEntry.QTY_COL} INTEGER" +
+            "${GiftEntry.QTY_COL} INTEGER," +
             "${GiftEntry.IMAGE_COL} BLOB" +
             ")"
 

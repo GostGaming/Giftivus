@@ -1,4 +1,4 @@
-package com.gostsoft.giftivus.db
+package com.gostsoft.giftivus.models.db
 
 import android.provider.BaseColumns
 

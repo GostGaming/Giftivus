@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
-    android:id="@+id/gift_rv"
-    tools:context=".views.GiftListView">
+    android:id="@+id/giftee_rv"
+    tools:context=".views.GifteeListView">
 
 </androidx.recyclerview.widget.RecyclerView>
