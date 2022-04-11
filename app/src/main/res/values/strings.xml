@@ -6,6 +6,6 @@
     <string name="gift_link_placeholder">amazon.com</string>
     <string name="gift_image_description">Picture of gift</string>
     <string name="number1">1</string>
-    <string name="picture_of_giftee">Picture of giftee</string>
-    <string name="firstnamelastname">FirstNameLastName</string>
+    <string name="picture_of_recipient">Picture of recipient</string>
+    <string name="firstname_lastname">FirstNameLastName</string>
 </resources>

@@ -10,12 +10,14 @@
         <entry key="..\:/Giftivus/app/src/main/res/layout/activity_gift_list.xml" value="0.5494791666666666" />
         <entry key="..\:/Giftivus/app/src/main/res/layout/activity_giftee_list.xml" value="0.36666666666666664" />
         <entry key="..\:/Giftivus/app/src/main/res/layout/activity_main.xml" value="0.32760416666666664" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/activity_recipient_list.xml" value="0.17291666666666666" />
         <entry key="..\:/Giftivus/app/src/main/res/layout/activity_scrolling.xml" value="0.49728260869565216" />
         <entry key="..\:/Giftivus/app/src/main/res/layout/content_scrolling.xml" value="0.2672239108409321" />
         <entry key="..\:/Giftivus/app/src/main/res/layout/gift_bar.xml" value="0.5494791666666666" />
         <entry key="..\:/Giftivus/app/src/main/res/layout/gift_list.xml" value="0.49094202898550726" />
-        <entry key="..\:/Giftivus/app/src/main/res/layout/single_gift.xml" value="0.2563405797101449" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/single_gift.xml" value="0.1" />
         <entry key="..\:/Giftivus/app/src/main/res/layout/single_giftee.xml" value="0.32760416666666664" />
+        <entry key="..\:/Giftivus/app/src/main/res/layout/single_recipient.xml" value="0.17291666666666666" />
         <entry key="..\:/Giftivus/app/src/main/res/menu/menu_scrolling.xml" value="0.32760416666666664" />
       </map>
     </option>

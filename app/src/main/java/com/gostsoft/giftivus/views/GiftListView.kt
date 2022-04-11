@@ -6,9 +6,11 @@ import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.gostsoft.giftivus.models.Gift
 import com.gostsoft.giftivus.R
 import com.gostsoft.giftivus.databinding.ActivityGiftListBinding
+import com.gostsoft.giftivus.models.db.GiftDbTable
 
 const val EXTRA_ID = "com.gostsoft.giftivus.USERID"
 
@@ -28,7 +30,12 @@ class GiftListView : AppCompatActivity()  {
 
         userId = intent.extras?.getInt(EXTRA_ID) ?: 0
 
-        updateGifts ()
+        val giftRv = binding.giftRv
+        giftRv.setHasFixedSize(true)
+        giftRv.layoutManager = LinearLayoutManager(this)
+        giftRv.adapter = GiftAdapter(GiftDbTable(this).getAllGifts(), this)
+
+       // updateGifts ()
     }
 
 

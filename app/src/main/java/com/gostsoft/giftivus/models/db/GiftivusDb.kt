@@ -1,46 +1,54 @@
 package com.gostsoft.giftivus.models.db
 
 import android.content.Context
+import android.content.res.Resources
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import com.gostsoft.giftivus.R
 import java.io.ByteArrayOutputStream
+import java.lang.Exception
 
-class GiftivusDb (context: Context): SQLiteOpenHelper (context, DATABASE_NAME, null, DATABASE_VERSION){
+class GiftivusDb (val context: Context): SQLiteOpenHelper (context, DATABASE_NAME, null, DATABASE_VERSION){
 
-    private val SQL_CREATE_GIFTEE_ENTRIES = "CREATE TABLE ${GifteeEntry.TABLE_NAME} (" +
-            "${GifteeEntry._ID} INTEGER PRIMARY KEY," +
-            "${GifteeEntry.FIRSTNAME_COL} TEXT," +
-            "${GifteeEntry.LASTNAME_COL} TEXT," +
-            "${GifteeEntry.IMAGE_COL} BLOB" +
+    private val SQL_CREATE_RECIPIENT_ENTRIES = "CREATE TABLE IF NOT EXISTS ${RecipientEntry.TABLE_NAME} (" +
+            "${RecipientEntry._ID} INTEGER PRIMARY KEY," +
+            "${RecipientEntry.FIRSTNAME_COL} TEXT," +
+            "${RecipientEntry.LASTNAME_COL} TEXT," +
+            "${RecipientEntry.IMAGE_COL} BLOB" +
             ")"
 
-    private val SQL_CREATE_GIFT_ENTRIES = "CREATE TABLE ${GiftEntry.TABLE_NAME} (" +
+    private val SQL_CREATE_GIFT_ENTRIES = "CREATE TABLE IF NOT EXISTS ${GiftEntry.TABLE_NAME} (" +
             "${GiftEntry._ID} INTEGER PRIMARY KEY," +
             "${GiftEntry.NAME_COL} TEXT," +
-            "${GiftEntry.GIFTEE_COL} INTEGER," +
+            "${GiftEntry.RECIPIENT_COL} INTEGER," +
             "${GiftEntry.LINK_COL} TEXT," +
             "${GiftEntry.QTY_COL} INTEGER," +
             "${GiftEntry.IMAGE_COL} BLOB" +
             ")"
 
-    private val SQL_DELETE_GIFTEE_ENTRIES = "DROP TABLE IF EXISTS ${GifteeEntry.TABLE_NAME}"
+    private val SQL_DELETE_RECIPIENT_ENTRIES = "DROP TABLE IF EXISTS ${RecipientEntry.TABLE_NAME}"
     private val SQL_DELETE_GIFT_ENTRIES = "DROP TABLE IF EXISTS ${GiftEntry.TABLE_NAME}"
 
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL(SQL_CREATE_GIFTEE_ENTRIES)
+        db.execSQL(SQL_CREATE_RECIPIENT_ENTRIES)
         db.execSQL(SQL_CREATE_GIFT_ENTRIES)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, p1: Int, p2: Int) {
-        db.execSQL(SQL_DELETE_GIFTEE_ENTRIES)
+        resetDb(db)
+    }
+
+    fun resetDb(db: SQLiteDatabase) {
+        db.execSQL(SQL_DELETE_RECIPIENT_ENTRIES)
         db.execSQL(SQL_DELETE_GIFT_ENTRIES)
         onCreate(db)
     }
-
 }
+
+
 
 fun SQLiteDatabase.doQuery(table: String, columns: Array<String>, selection: String? = null,
                             selectionArgs: Array<String>? = null, groupBy: String? = null,

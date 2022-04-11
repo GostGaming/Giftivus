@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Giftivus">
         <activity
-            android:name=".UserGiftList"
-            android:exported="true" />
+            android:name=".views.GiftListView"
+            android:exported="false" />
+        <activity android:name=".views.RecipientListView"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".views.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Giftivus.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
