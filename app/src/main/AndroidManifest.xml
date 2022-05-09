@@ -8,16 +8,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Giftivus">
+        android:theme="@style/Theme.Giftivus.Starting">
         <activity
             android:name=".views.GiftListView"
+            android:theme="@style/Theme.Giftivus"
             android:exported="false" />
         <activity android:name=".views.RecipientListView"
+            android:theme="@style/Theme.Giftivus"
             android:exported="false" />
         <activity
             android:name=".views.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Giftivus.NoActionBar">
+            android:theme="@style/Theme.Giftivus.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

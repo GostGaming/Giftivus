@@ -8,4 +8,5 @@
     <string name="number1">1</string>
     <string name="picture_of_recipient">Picture of recipient</string>
     <string name="firstname_lastname">FirstNameLastName</string>
+    <string name="gift_add_btn">add a new gift!</string>
 </resources>

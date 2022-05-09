@@ -8,5 +8,4 @@
     android:padding="8dp"
     android:id="@+id/gift_rv"
     tools:context=".views.GiftListView">
-
 </androidx.recyclerview.widget.RecyclerView>

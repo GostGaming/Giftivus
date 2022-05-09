@@ -61,7 +61,7 @@ class RecipientDbTable(private val context: Context) {
             }
         }
         cursor.close()
-
+        if (gifts.isEmpty()) gifts.add(Recipient(1, "Brandon", "Bryant", defaultBitmap())) // TESTING ONLY
         return gifts
     }
 
